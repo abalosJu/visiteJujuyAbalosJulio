@@ -1,0 +1,257 @@
+/*INICIO MENU*/
+.menu{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    &__item{
+        padding: 5px;
+        list-style: none;
+    }
+
+    &__link{
+        color: rgb(209, 209, 209);
+        text-decoration: none;
+    }
+
+    &__link:hover{
+        color: lightcoral;
+    }
+
+    &__item:hover .submenu{
+        display: block;
+    }
+
+    &--vertical{
+        flex-direction: column;
+    }
+
+}
+
+.submenu{
+    background-color:#7999B7;
+    position: absolute;
+    width: auto;
+    display: none;
+    padding: 0;
+    margin: 0;
+
+    &__item{
+        display: block;
+        padding: 10px;
+        list-style: none;
+    }
+
+    &__link{
+        color: rgb(209, 209, 209);
+        text-decoration: none;
+    }
+
+    &__link:hover{
+        color: lightcoral;
+    }
+}
+/*FIN MENU*/
+
+#homeJujuy{
+    grid-area: textoUno;
+}
+#homeRegiones{
+    grid-area: textoDos;
+}
+#homeComidas{
+    grid-area: textoTres;
+}
+.articulo{
+
+    background-color: rgb(255, 255, 255);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+
+    &__texto{
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        padding: 10px;
+        height: calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    &__galeria{
+        height: calc(50% - 20px);
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    &__imagen{
+        height: 100%;
+        width: 100%;
+        border: 2px solid rgb(158, 158, 158);
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+}
+
+.footer{
+    background-image: linear-gradient(to right, rgb(51, 51, 51) , rgb(150, 149, 149));
+    grid-area: footer;
+    height: auto;
+    background: rgb(54, 53, 54);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: cornsilk;
+    font-style: italic;
+    font-size: 14px;
+    border: 1px solid black;
+
+    &__menu{
+        color: cornsilk;            
+    }
+
+    &__firma{
+        font-size: 20px;
+    }
+
+    &__redes{
+        font-size: 14px;
+    }
+}
+
+@mixin estiloTexto($tamaño , $color){
+
+    font-family: 'Playfair Display', serif;
+    font-size: $tamaño;
+    color: $color;
+    
+}
+
+.places{
+    background-color: #EED8CB;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    border-radius: 10px;
+    height: auto;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+    &__descripcion{
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    &__titulo{
+        font-style: italic;
+
+    }
+
+    &__texto{
+        @include estiloTexto(18px, #040404);
+        padding: 10px;
+        height: auto;
+        
+    }
+
+    &__galeria{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    &__imagen{
+        height: 100%;
+        width: 100%;
+
+    }
+
+    &__img{
+        height: 100%;
+        width: 100%;
+        border: 2px solid rgb(158, 158, 158);
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+
+.evento{
+    
+    @extend .places;
+    padding: 15px;
+
+    &__descripcion{
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    &__titulo{
+        font-style: italic;
+
+    }
+
+    &__texto{
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        padding: 10px;
+        height: auto;
+        
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    nav label{
+        display: block;
+        padding: 10px 5px;
+        
+    }
+
+    #btn-menu:checked ~ .menu{
+        display: flex;
+    }
+    
+    .menu{
+        position: absolute;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        align-content: flex-end;
+        margin-top: 55px;
+        padding: 5px 0; 
+        background-color: #7999B7;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        transition: all 0.5s;
+        
+        &__item:hover .submenu{
+            display: none;
+        }
+    }
+
+}
