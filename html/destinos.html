@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/estiloSCSS.css">
-    <link rel="stylesheet" href="scss/estilo.scss">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estiloSCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Destinos - Visite Jujuy</title>
 </head>
@@ -15,21 +15,17 @@
 
         <header>
 
-            <div id="logoJujuy">
-                <img src="img/logo.png" alt="logoVisiteJujuy" id="logo">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logoVisiteJujuy" id="logo">
             </div>
 
             <nav>
+                <input type="checkbox" id="btn-menu">
+                <label for="btn-menu"><img src="img/btn-menu.png" alt=""></label>
+
                 <ul class="menu">
-                    <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="destinos.html">Destinos</a>
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="destinos.html">Salinas Grandes</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="destinos.html">Valle de la Luna</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="destinos.html">El Hornacal</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="destinos.html">Termas Rio Jordan</a></li>
-                        </ul>
-                    </li>
+                    <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="destinos.html">Destinos</a></li>
                     <li class="menu__item"><a class="menu__link" href="eventos.html">Eventos</a></li>
                     <li class="menu__item"><a class="menu__link" href="galeria.html">Galeria</a></li>
                     <li class="menu__item"><a class="menu__link" href="contacto.html">Contacto</a></li>
@@ -44,7 +40,7 @@
                     
             <section>
 
-                <h2>CONOCE NUESTROS MEJORES DESTINOS</h2>
+                <h1>Nuestros Mejores Destinos</h1>
 
                 <article class="places">
 
@@ -59,7 +55,7 @@
                     </div>     
 
                     <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="img/destinos/salinasGrandes1.jpg" alt="salinasGrandes"></div>
+                        <div class="places__imagen"><img class="places__img" src="../img/destinos/salinasGrandes1.jpg" alt="salinasGrandes"></div>
                     </div>
 
                 </article>
@@ -67,7 +63,7 @@
                 <article class="places">
 
                     <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="img/destinos/valleLuna1.jpg" alt="salinasGrandes"></div>
+                        <div class="places__imagen"><img class="places__img" src="../img/destinos/valleLuna1.jpg" alt="salinasGrandes"></div>
                     </div>
                     
                     <div class="places__descripcion col-md-7">
@@ -93,7 +89,7 @@
                     </div>
 
                     <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="img/destinos/hornacal2.jpg" alt="salinasGrandes"></div>
+                        <div class="places__imagen"><img class="places__img" src="../img/destinos/hornacal2.jpg" alt="salinasGrandes"></div>
                     </div>
 
                 </article>
@@ -101,7 +97,7 @@
                 <article class="places">
 
                     <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="img/destinos/termas2.jpg" alt="salinasGrandes"></div>
+                        <div class="places__imagen"><img class="places__img" src="../img/destinos/termas2.jpg" alt="salinasGrandes"></div>
                     </div>
                     
                     <div class="places__descripcion col-med-7">
@@ -129,7 +125,7 @@
 
             <div class="footer__menu">
                 <ul class="menu menu--vertical">
-                    <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
                     <li class="menu__item"><a class="menu__link" href="destinos.html">Destinos</a></li>
                     <li class="menu__item"><a class="menu__link" href="eventos.html">Eventos</a></li>
                     <li class="menu__item"><a class="menu__link" href="galeria.html">Galeria</a></li>
@@ -144,9 +140,9 @@
             </div>
             <div class="footer__redes">
                 <ul class="menu menu--vertical">
-                    <li class="menu__item"><a class="menu__link" href="https://www.instagram.com/visitjujuy">Instagram</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.facebook.com/VisitJujuyOfficial">Facebook</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/">Youtube</a></li>
+                    <li class="menu__item"><a class="menu__link" href="https://www.instagram.com/visitjujuy" target="_blank">Instagram</a></li>
+                    <li class="menu__item"><a class="menu__link" href="https://www.facebook.com/VisitJujuyOfficial" target="_blank">Facebook</a></li>
+                    <li class="menu__item"><a class="menu__link" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/" target="_blank">Youtube</a></li>
                 </ul>
 
             </div>

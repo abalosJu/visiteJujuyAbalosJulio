@@ -1,4 +1,35 @@
+/*INICIO NAV*/
+
+.logo{
+    width: 25%;
+    height: 100%;
+}
+
+#logo{
+    height: 90%;
+    width: 80%;
+    margin: 5px;
+}
+
+nav{
+    border-radius: 8px;
+    width: 75%;
+    height: calc(100% - 10px);
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
 /*INICIO MENU*/
+
+#btn-menu{
+    display: none;
+}
+nav label{
+    display: none;
+}
+
 .menu{
     width: 75%;
     display: flex;
@@ -55,6 +86,151 @@
     }
 }
 /*FIN MENU*/
+/*FIN NAV*/
+
+#gridHome{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(40% - 5px) calc(40% - 5px) 20%;
+    grid-template-rows: 60px 300px 400px 400px 400px 150px;
+    grid-template-areas: "header header header"
+                         "aside aside aside"
+                         "textoUno textoUno textoUno"
+                         "textoDos textoDos textoDos"
+                         "textoTres textoTres textoTres"
+                         "footer footer footer";
+}
+
+/*INICIO HEADER*/
+header{
+    background-color:#7999B7;
+    height: 60px;
+    border-radius: 8px;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+}
+
+#logo{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+nav{
+    border-radius: 8px;
+    width: 75%;
+    height: calc(100% - 10px);
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/*INICIO MENU*/
+
+#btn-menu{
+    display: none;
+}
+nav label{
+    display: none;
+}
+
+.menu{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    &__item{
+        padding: 5px;
+        list-style: none;
+    }
+
+    &__link{
+        color: rgb(209, 209, 209);
+        text-decoration: none;
+    }
+
+    &__link:hover{
+        color: lightcoral;
+    }
+
+    &__item:hover .submenu{
+        display: block;
+    }
+
+    &--vertical{
+        flex-direction: column;
+    }
+}
+
+.submenu{
+    background-color:#7999B7;
+    position: absolute;
+    width: auto;
+    display: none;
+    padding: 0;
+    margin: 0;
+
+    &__item{
+        display: block;
+        padding: 10px;
+        list-style: none;
+    }
+
+    &__link{
+        color: rgb(209, 209, 209);
+        text-decoration: none;
+    }
+
+    &__link:hover{
+        color: lightcoral;
+    }
+}
+/*FIN MENU*/
+/*FIN HEADER*/
+
+/*INICIO PORTADA*/
+.portada{
+    grid-area: aside;
+    background-image: url(../img/purma.jpg);
+    border-radius: 8px;
+    background-size: 100% 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__titulo{
+        background-color: rgba(173, 216, 230, 0.600);
+        color: white;
+        font-style: italic;
+    }
+
+    &__texto{
+    background-color: rgba(173, 216, 230, 0.600);
+    font-style: italic;
+    font-size: 20px;
+    color: #fff;
+    padding: auto;
+    text-align: center;
+    }
+}
+/*FIN PORTADA*/
 
 #homeJujuy{
     grid-area: textoUno;
@@ -143,12 +319,20 @@
     
 }
 
+/*INICIO DESTINOS*/
+.gridDestinos{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .places{
-    background-color: #EED8CB;
+    background-color: #fdf7f4;
     font-family: 'Playfair Display', serif;
     font-size: 14px;
     border-radius: 10px;
-    height: auto;
+    height: 400px;
     width: calc(100% - 20px);
     display: flex;
     flex-direction: row;
@@ -157,6 +341,9 @@
     &__descripcion{
         text-align: center;
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center
 
     }
 
@@ -198,6 +385,15 @@
         object-fit: cover;
     }
 }
+/*FIN DESTINOS*/
+
+/*INICIO EVENTOS*/
+.gridEventos{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 .evento{
     
@@ -207,6 +403,9 @@
     &__descripcion{
         text-align: center;
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
     }
 
@@ -223,13 +422,58 @@
         
     }
 }
+/*FIN EVENTOS*/
+
+.gridGaleria{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*INICIO CONTACTO*/
+.gridContacto{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contacto{
+    background-image: url(../img/contacto.jpg);
+    background-size: 100% 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    color: #fdf7f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &__formulario{
+        width: 350px;
+        margin: auto;
+        margin-top: 25px;
+        background: rgba(0,0,0,.4);
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    &__input{
+        width: 100%;
+    
+    }
+
+    textarea{
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width: 768px){
 
     nav label{
         display: block;
-        padding: 10px 5px;
-        
+        padding: 10px 5px;        
     }
 
     #btn-menu:checked ~ .menu{
