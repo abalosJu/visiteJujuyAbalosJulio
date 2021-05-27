@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estiloSCSS.css">
+    <script src="https://kit.fontawesome.com/156184f9e1.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Destinos - Visite Jujuy</title>
@@ -21,7 +22,7 @@
 
             <nav>
                 <input type="checkbox" id="btn-menu">
-                <label for="btn-menu"><img src="img/btn-menu.png" alt=""></label>
+                <label for="btn-menu"><i id="icono" class="fas fa-bars"></i></label>
 
                 <ul class="menu">
                     <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
@@ -34,117 +35,117 @@
                         
         </header>
 
-        <hr>
-
-        <main>
+        <div class="titulo"><h1>Nuestros Mejores Destinos</h1></div>
                     
-            <section>
+        <section class="salinasGrandes">
 
-                <h1>Nuestros Mejores Destinos</h1>
+            <article class="places">
 
-                <article class="places">
+                <div class="places__descripcion">
+                    <h4 class="places__titulo">Salinas Grandes</h4>
+                    <p class="places__texto">Sol intenso, cielo azul y un mar de sal convierten a Las Salinas Grandes en
+                        una de las 7 Maravillas Naturales Argentinas.
+                        Se trata de un territorio de 12 mil hectáreas, que alcanza una altura de 4.000 metros sobre el nivel del mar.
+                        Surgieron a partir de que la cuenca quedó cubierta por aguas provenientes de un volcán, la evaporación de 
+                        estas aguas formó una capa de sal que alcanza un espesor promedio de 30 centímetros.
+                        </p>
+                </div>     
 
-                    <div class="places__descripcion col-md-7">
-                        <h4 class="places__titulo">Salinas Grandes</h4>
-                        <p class="places__texto">Sol intenso, cielo azul y un mar de sal convierten a Las Salinas Grandes en
-                            una de las 7 Maravillas Naturales Argentinas.
-                            Se trata de un territorio de 12 mil hectáreas, que alcanza una altura de 4.000 metros sobre el nivel del mar.
-                            Surgieron a partir de que la cuenca quedó cubierta por aguas provenientes de un volcán, la evaporación de 
-                            estas aguas formó una capa de sal que alcanza un espesor promedio de 30 centímetros.
-                            </p>
-                    </div>     
+                <div class="places__galeria">
+                    <div class="places__imagen"><img class="places__img" src="../img/destinos/salinasGrandes1.jpg" alt="salinasGrandes"></div>
+                </div>
 
-                    <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="../img/destinos/salinasGrandes1.jpg" alt="salinasGrandes"></div>
-                    </div>
+            </article>
 
-                </article>
+        </section>
 
-                <article class="places">
+        <section class="valleLuna">
 
-                    <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="../img/destinos/valleLuna1.jpg" alt="salinasGrandes"></div>
-                    </div>
+            <article class="places">
+
+                <div class="places__galeria">
+                    <div class="places__imagen"><img class="places__img" src="../img/destinos/valleLuna1.jpg" alt="valleDeLaLuna"></div>
+                </div>
                     
-                    <div class="places__descripcion col-md-7">
-                        <h4 class="places__titulo">Valle de la Luna</h4>
-                        <p class="places__texto">Talladas por procesos erosivos realizados por el 
-                            agua y el viento sobre rocas volcánicas. Asi surge El Valle de la Luna, una formación geológica a 3770 msnm.
-                            Con el transcurso de milenios se han ido esculpiéndo domos, quebradas y columnas, un paisaje desértico,
-                            donde dominan variados colores: verdes, grises, pálidos beige, pasando por tonalidades de rosa, naranja,
-                            castaño oscuro, hasta el rojo y el carmesí.</p>
-                    </div>
+                <div class="places__descripcion">
+                    <h4 class="places__titulo">Valle de la Luna</h4>                        
+                    <p class="places__texto">Talladas por procesos erosivos realizados por el 
+                    agua y el viento sobre rocas volcánicas. Asi surge El Valle de la Luna, una formación geológica a 3770 msnm.
+                    Con el transcurso de milenios se han ido esculpiéndo domos, quebradas y columnas, un paisaje desértico,
+                    donde dominan variados colores: verdes, grises, pálidos beige, pasando por tonalidades de rosa, naranja,
+                    castaño oscuro, hasta el rojo y el carmesí.</p>
+                </div>
 
-                </article>
-
-                <article class="places">
-
-                    <div class="places__descripcion col-med-7">
-                        <h4 class="places__titulo">El Hornacal</h4>
-                        <p class="places__texto">La serranía de Hornocal se encuentra en la denominada región puneña de Jujuy a más de 4.700 msnm.
-                            Un camino de ripio deja a los turistas en un balcón al frente del majestuoso cerro cuya simetría y color 
-                            atrapan al oportuno visitante. Los colores se componen por varios minerales que, al ser erosionados, 
-                            dejaron formaciones triangulares en las laderas de las montañas. Por la tarde es cuando 
-                            se obtienen las mejores fotografías, ya que el sol destaca los colores sobre la ladera montañosa.</p>
-                    </div>
-
-                    <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="../img/destinos/hornacal2.jpg" alt="salinasGrandes"></div>
-                    </div>
-
-                </article>
-
-                <article class="places">
-
-                    <div class="places__galeria col-md-5">
-                        <div class="places__imagen"><img class="places__img" src="../img/destinos/termas2.jpg" alt="salinasGrandes"></div>
-                    </div>
-                    
-                    <div class="places__descripcion col-med-7">
-                        <h4 class="places__titulo">Termas Rio Jordan</h4>
-                        <p class="places__texto">Las Termas del Jordán se encuentran en la localidad de San Francisco, cerca del
-                            Parque Nacional Calilegua. Posee pozos naturales de aguas termales, que llegan a los 30° grados, sulfurosas
-                            de un intenso color turquesa se convierten en una de las pocas piletas termales naturales del mundo.
-                            La tradición de los pozos termales dice que bañarse en sus aguas revitaliza y energiza el alma.</p>
-
-                    </div>                    
-
-                </article>
-
-            </section>
+            </article>
             
-            <hr>
+        </section>
 
-            <a href="index.html">Volver</a>
+        <section class="hornacal">
 
-        </main>
+            <article class="places">
 
-        <hr>
+                <div class="places__descripcion">
+                    <h4 class="places__titulo">El Hornacal</h4>
+                    <p class="places__texto">La serranía de Hornocal se encuentra en la denominada región puneña de Jujuy a más de 4.700 msnm.
+                    Un camino de ripio deja a los turistas en un balcón al frente del majestuoso cerro cuya simetría y color 
+                    atrapan al oportuno visitante. Los colores se componen por varios minerales que, al ser erosionados, 
+                    dejaron formaciones triangulares en las laderas de las montañas. Por la tarde es cuando 
+                    se obtienen las mejores fotografías, ya que el sol destaca los colores sobre la ladera montañosa.</p>
+                </div>
+
+                <div class="places__galeria">
+                    <div class="places__imagen"><img class="places__img" src="../img/destinos/hornacal2.jpg" alt="salinasGrandes"></div>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="rioJordan">
+
+            <article class="places">
+
+                <div class="places__galeria">
+                    <div class="places__imagen"><img class="places__img" src="../img/destinos/termas2.jpg" alt="salinasGrandes"></div>
+                </div>
+                    
+                <div class="places__descripcion">
+                    <h4 class="places__titulo">Termas Rio Jordan</h4>
+                    <p class="places__texto">Las Termas del Jordán se encuentran en la localidad de San Francisco, cerca del
+                    Parque Nacional Calilegua. Posee pozos naturales de aguas termales, que llegan a los 30° grados, sulfurosas
+                    de un intenso color turquesa se convierten en una de las pocas piletas termales naturales del mundo.
+                    La tradición de los pozos termales dice que bañarse en sus aguas revitaliza y energiza el alma.</p>
+
+                </div>                    
+
+            </article>
+
+        </section>
 
         <footer class="footer">
 
             <div class="footer__menu">
                 <ul class="menu menu--vertical">
                     <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="destinos.html">Destinos</a></li>
-                    <li class="menu__item"><a class="menu__link" href="eventos.html">Eventos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="html/destinos.html">Destinos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="html/eventos.html">Eventos</a></li>
                     <li class="menu__item"><a class="menu__link" href="galeria.html">Galeria</a></li>
                     <li class="menu__item"><a class="menu__link" href="contacto.html">Contacto</a></li>
                 </ul>
-
             </div>
+
             <div class="footer__firma">
-
+                <img src="../img/firmaFooter.png" alt="firma" id="coyita">
                 <p id="textFooter">A Jujuy Siempre Se Vuelve!</p>
-
+                <p class="firma">By Abalos Julio</p>
             </div>
-            <div class="footer__redes">
-                <ul class="menu menu--vertical">
-                    <li class="menu__item"><a class="menu__link" href="https://www.instagram.com/visitjujuy" target="_blank">Instagram</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.facebook.com/VisitJujuyOfficial" target="_blank">Facebook</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/" target="_blank">Youtube</a></li>
-                </ul>
 
+            <div class="footer__redes">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.instagram.com/visitjujuy"><i class="fab fa-instagram"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.facebook.com/VisitJujuyOfficial"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/"><i class="fab fa-youtube"></i></a></li>
+                </ul>
             </div>
 
         </footer>

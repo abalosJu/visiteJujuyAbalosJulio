@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estiloSCSS.css">
+    <script src="https://kit.fontawesome.com/156184f9e1.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Eventos - Visite Jujuy</title>
@@ -21,7 +22,7 @@
 
             <nav>
                 <input type="checkbox" id="btn-menu">
-                <label for="btn-menu"><img src="img/btn-menu.png" alt=""></label>
+                <label for="btn-menu"><i id="icono" class="fas fa-bars"></i></label>
 
                 <ul class="menu">
                     <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
@@ -33,85 +34,75 @@
             </nav>
                         
         </header>
+            
+        <div class="titulo"><h1>Compratí con nosotros...</h1></div>
 
-        <hr>
+        <section class="eventos">
 
-        <main>            
+            <article class="evento">                
+                <div class="evento__descripcion">
+                    <h2 class="evento__titulo">El Enero Tilcareño</h2>
+                    <p class="evento__texto">Tilcara, esa ciudad con aire de pueblo que se esconde entre los colores
+                        de los cerros, nos invita año a año a ser parte de las actividades más divertidas en el “Enero Tilcareño”,
+                        una de las festividades más importantes de la puna norteña.
+                        Jornadas repletas de peñas, música andina, bailes, copleadas, ferias de artesanías y recetas regionales, 
+                        conciertos, juegos e incluso miradores ubicados estratégicamente frente a los paisajes más bellos, 
+                        festivales folclóricos que le imprimen aún más tradición.</p>
+                </div>
+            </article>        
 
-            <section>
+            <article class="evento">
+                <div class="evento__descripcion">
+                    <h2 class="evento__titulo">¡Carnaval!</h2>
+                    <p class="evento__texto">Para vivir el Carnaval de Jujuy, especialmente el de la Quebrada de Humahuaca, hay que ingresar en el 
+                    tiempo de la espuma, la chicha, el papel picado, el talco, la alegría desmesurada, la serpentina, 
+                    el humo y el amor incierto… Y que todo vuelva a recomenzar una y otra vez durante nueve días.
+                    Se trata de una de las pocas fiestas que conservan su carácter popular y colectivo: en el Carnaval 
+                    todos somos parte. A pesar de la incorporación de otras costumbres y la masividad creciente, las 
+                    tradiciones andinas siguen vigentes. Fiesta de la alegría y baile, de las promesas y los agradecimientos.
+                    La Pachamama, la madre tierra es quien preside todos los actos. </p>
+                </div>
+            </article>        
 
-                <h1>COMPARTÍ CON NOSOTROS...</h1>
-
-                <article class="evento">
-
-                    <div class="evento__descripcion">
-                        <h2 class="evento__titulo">El Enero Tilcareño</h2>
-                        <p class="evento__texto">Tilcara, esa ciudad con aire de pueblo que se esconde entre los colores
-                            de los cerros, nos invita año a año a ser parte de las actividades más divertidas en el “Enero Tilcareño”,
-                            una de las festividades más importantes de la puna norteña.
-                            Jornadas repletas de peñas, música andina, bailes, copleadas, ferias de artesanías y recetas regionales, 
-                            conciertos, juegos e incluso miradores ubicados estratégicamente frente a los paisajes más bellos, 
-                            festivales folclóricos que le imprimen aún más tradición.</p>
-                    </div>
-                </article>
-
-                <article class="evento">
-                    <div class="evento__descripcion">
-                        <h2 class="evento__titulo">¡Carnaval!</h2>
-                        <p class="evento__texto">Para vivir el Carnaval de Jujuy, especialmente el de la Quebrada de Humahuaca, hay que ingresar en el 
-                            tiempo de la espuma, la chicha, el papel picado, el talco, la alegría desmesurada, la serpentina, 
-                            el humo y el amor incierto… Y que todo vuelva a recomenzar una y otra vez durante nueve días.
-                            Se trata de una de las pocas fiestas que conservan su carácter popular y colectivo: en el Carnaval 
-                            todos somos parte. A pesar de la incorporación de otras costumbres y la masividad creciente, las 
-                            tradiciones andinas siguen vigentes. Fiesta de la alegría y baile, de las promesas y los agradecimientos.
-                            La Pachamama, la madre tierra es quien preside todos los actos. </p>
-                    </div>
-                </article>
-
-                <article class="evento">
-                    <div class="evento__descripcion">
-                        <h2 class="evento__titulo">Pachamama</h2>
-                        <p class="evento__texto">Durante todo el mes de agosto se celebra la Pachamama que, en quechua, significa "MAdre Tierra".
-                            Se trata de una creencia andina que venera a la naturaleza y forma parte de la cultura y 
-                            la tradición de los pueblos originarios de América Latina. La costumbre centenaria comienza el 1 de
-                            agosto con rituales y ofrendas que se realizan con el espíritu de devolver a la tierra lo que de 
-                            ella se ha tomado y agradecimiento por el trabajo, la salud, los animales y las cosechas. Este ritual
-                            es conocido como Corpachada. Honrar a la Pachamama implica reconocerla como generadora de vida.</p>
-                    </div>                        
-                 </article>            
-                
-            </section>
-
-        </main>
-
-        <hr>
+            <article class="evento">
+                <div class="evento__descripcion">
+                    <h2 class="evento__titulo">Pachamama</h2>
+                    <p class="evento__texto">Durante todo el mes de agosto se celebra la Pachamama que, en quechua, significa "Madre Tierra".
+                    Se trata de una creencia andina que venera a la naturaleza y forma parte de la cultura y 
+                    la tradición de los pueblos originarios de América Latina. La costumbre centenaria comienza el 1 de
+                    agosto con rituales y ofrendas que se realizan con el espíritu de devolver a la tierra lo que de 
+                    ella se ha tomado y agradecimiento por el trabajo, la salud, los animales y las cosechas. Este ritual
+                    es conocido como Corpachada. Honrar a la Pachamama implica reconocerla como generadora de vida.</p>
+                </div>
+            </article>            
+            
+        </section>
 
         <footer class="footer">
 
             <div class="footer__menu">
                 <ul class="menu menu--vertical">
-                    <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="destinos.html">Destinos</a></li>
-                    <li class="menu__item"><a class="menu__link" href="eventos.html">Eventos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="html/destinos.html">Destinos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="html/eventos.html">Eventos</a></li>
                     <li class="menu__item"><a class="menu__link" href="galeria.html">Galeria</a></li>
                     <li class="menu__item"><a class="menu__link" href="contacto.html">Contacto</a></li>
                 </ul>
-
             </div>
+
             <div class="footer__firma">
-
+                <img src="../img/firmaFooter.png" alt="firma" id="coyita">
                 <p id="textFooter">A Jujuy Siempre Se Vuelve!</p>
-
+                <p class="firma">By Abalos Julio</p>
             </div>
+            
             <div class="footer__redes">
-                <ul class="menu menu--vertical">
-                    <li class="menu__item"><a class="menu__link" href="https://www.instagram.com/visitjujuy">Instagram</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.facebook.com/VisitJujuyOfficial">Facebook</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/">Youtube</a></li>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.instagram.com/visitjujuy"><i class="fab fa-instagram"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.facebook.com/VisitJujuyOfficial"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/"><i class="fab fa-youtube"></i></a></li>
                 </ul>
-
             </div>
-
         </footer>
 
     </div>

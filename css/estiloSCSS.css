@@ -1,223 +1,138 @@
-/*INICIO NAV*/
-.logo {
-  width: 25%;
-  height: 100%; }
+body {
+  background-image: url(../img/back.png);
+  background-color: #e6e6e6;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0; }
 
-#logo {
-  height: 90%;
-  width: 80%;
-  margin: 5px; }
-
-nav {
-  border-radius: 8px;
-  width: 75%;
-  height: calc(100% - 10px);
-  margin: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: end; }
-
-/*INICIO MENU*/
-#btn-menu {
-  display: none; }
-
-nav label {
-  display: none; }
-
-.menu {
-  width: 75%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
-  margin: 0; }
-  .menu__item {
-    padding: 5px;
-    list-style: none; }
-  .menu__link {
-    color: #d1d1d1;
-    text-decoration: none; }
-  .menu__link:hover {
-    color: lightcoral; }
-  .menu__item:hover .submenu {
-    display: block; }
-  .menu--vertical {
-    flex-direction: column; }
-
-.submenu {
-  background-color: #7999B7;
-  position: absolute;
-  width: auto;
-  display: none;
-  padding: 0;
-  margin: 0; }
-  .submenu__item {
-    display: block;
-    padding: 10px;
-    list-style: none; }
-  .submenu__link {
-    color: #d1d1d1;
-    text-decoration: none; }
-  .submenu__link:hover {
-    color: lightcoral; }
-
-/*FIN MENU*/
-/*FIN NAV*/
 #gridHome {
-  width: 75%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: calc(40% - 5px) calc(40% - 5px) 20%;
-  grid-template-rows: 60px 300px 400px 400px 400px 150px;
-  grid-template-areas: "header header header" "aside aside aside" "textoUno textoUno textoUno" "textoDos textoDos textoDos" "textoTres textoTres textoTres" "footer footer footer"; }
-
-/*INICIO HEADER*/
-header {
-  background-color: #7999B7;
-  height: 60px;
-  border-radius: 8px;
-  grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-
-.logo {
-  width: 20%;
-  height: 100%; }
-
-#logo {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 10px; }
-
-nav {
-  border-radius: 8px;
-  width: 75%;
-  height: calc(100% - 10px);
-  margin: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
-
-/*INICIO MENU*/
-#btn-menu {
-  display: none; }
-
-nav label {
-  display: none; }
-
-.menu {
-  width: 75%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0;
-  margin: 0; }
-  .menu__item {
-    padding: 5px;
-    list-style: none; }
-  .menu__link {
-    color: #d1d1d1;
-    text-decoration: none; }
-  .menu__link:hover {
-    color: lightcoral; }
-  .menu__item:hover .submenu {
-    display: block; }
-  .menu--vertical {
-    flex-direction: column; }
-
-.submenu {
-  background-color: #7999B7;
-  position: absolute;
-  width: auto;
-  display: none;
-  padding: 0;
-  margin: 0; }
-  .submenu__item {
-    display: block;
-    padding: 10px;
-    list-style: none; }
-  .submenu__link {
-    color: #d1d1d1;
-    text-decoration: none; }
-  .submenu__link:hover {
-    color: lightcoral; }
-
-/*FIN MENU*/
-/*FIN HEADER*/
-/*INICIO PORTADA*/
-.portada {
-  grid-area: aside;
-  background-image: url(../img/purma.jpg);
-  border-radius: 8px;
-  background-size: 100% 120%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .portada__titulo {
-    background-color: rgba(173, 216, 230, 0.6);
-    color: white;
-    font-style: italic; }
-  .portada__texto {
-    background-color: rgba(173, 216, 230, 0.6);
-    font-style: italic;
-    font-size: 20px;
-    color: #fff;
-    padding: auto;
-    text-align: center; }
-
-/*FIN PORTADA*/
-#homeJujuy {
-  grid-area: textoUno; }
-
-#homeRegiones {
-  grid-area: textoDos; }
-
-#homeComidas {
-  grid-area: textoTres; }
-
-.articulo {
-  background-color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  border-radius: 10px;
-  height: 100%;
-  width: 100%; }
-  .articulo__texto {
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    padding: 10px;
-    height: calc(50% - 20px);
+  grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+  grid-template-rows: 60px 500px 80px 400px 400px 400px 180px;
+  grid-template-areas: "header header header" "aside aside aside" "titulo titulo titulo" "textoUno textoUno textoUno" "textoDos textoDos textoDos" "textoTres textoTres textoTres" "footer footer footer"; }
+  #gridHome .portada {
+    grid-area: aside;
+    background-image: url(../img/purma.jpg);
+    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  .articulo__galeria {
-    height: calc(50% - 20px);
+    #gridHome .portada__texto {
+      background-color: rgba(173, 216, 230, 0.6);
+      font-style: italic;
+      font-size: 24px;
+      color: #fff;
+      padding: auto;
+      text-align: center;
+      line-height: 30px; }
+  #gridHome #homeJujuy {
+    grid-area: textoUno; }
+  #gridHome #homeRegiones {
+    grid-area: textoDos; }
+  #gridHome #homeComidas {
+    grid-area: textoTres; }
+  #gridHome .articulo {
+    background-color: white;
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    border-radius: 10px;
+    height: 100%;
+    width: 80%;
+    margin: auto; }
+    #gridHome .articulo__texto {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      padding: 10px 20px;
+      height: calc(50% - 20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    #gridHome .articulo__galeria {
+      height: calc(50% - 20px);
+      display: flex;
+      flex-direction: row;
+      gap: 3px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px; }
+    #gridHome .articulo__imagen {
+      height: 100%;
+      width: 100%;
+      border: 2px solid #9e9e9e;
+      border-radius: 8px;
+      object-fit: cover; }
+
+/*INICIO HEADER*/
+header {
+  background: linear-gradient(120deg, #c14ebc 0%, #cedb71 37%, #c14ebc 100%);
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  header .logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start; }
+    header .logo #logo {
+      height: 50px;
+      width: 160px;
+      margin: auto; }
+  header nav {
+    border-radius: 8px;
+    width: 60%;
+    height: calc(100% - 10px);
+    margin: 5px;
     display: flex;
     flex-direction: row;
-    gap: 3px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px; }
-  .articulo__imagen {
-    height: 100%;
-    width: 100%;
-    border: 2px solid #9e9e9e;
-    border-radius: 10px;
-    object-fit: cover; }
+    justify-content: flex-end; }
+    header nav #btn-menu {
+      display: none; }
+    header nav #icono {
+      display: none; }
+    header nav .menu {
+      width: 75%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 0;
+      margin: 0; }
+      header nav .menu__item {
+        padding: 5px;
+        list-style: none; }
+      header nav .menu__link {
+        color: #2c2c2c;
+        text-decoration: none; }
+      header nav .menu__link:hover {
+        font-weight: bold;
+        color: #141414; }
+      header nav .menu--vertical {
+        flex-direction: column; }
 
+/*FIN HEADER*/
+.titulo {
+  grid-area: titulo;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(120deg, white 0%, #fefbf7 76%, #fcffff 100%); }
+
+/*INICIO FOOTER*/
 .footer {
-  background-image: linear-gradient(to right, #333333, #969595);
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
   grid-area: footer;
   height: auto;
-  background: #363536;
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -226,141 +141,939 @@ nav label {
   font-style: italic;
   font-size: 14px;
   border: 1px solid black; }
-  .footer__menu {
-    color: cornsilk; }
+  .footer__menu .menu__item {
+    padding: 2px;
+    list-style: none; }
+  .footer__menu .menu__link {
+    color: #f0f0f0;
+    text-decoration: none; }
   .footer__firma {
     font-size: 20px; }
+    .footer__firma #coyita {
+      width: 110px;
+      height: 65px; }
+    .footer__firma .firma {
+      font-size: 10px;
+      color: #f0f0f0; }
   .footer__redes {
-    font-size: 14px; }
+    font-size: 20px; }
+    .footer__redes .menu__item {
+      padding: 2px;
+      list-style: none; }
+    .footer__redes .menu__link {
+      color: #f0f0f0;
+      list-style: none; }
 
+/*FIN FOOTER*/
 /*INICIO DESTINOS*/
 .gridDestinos {
-  width: 75%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
-
-.places, .evento {
-  background-color: #fdf7f4;
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  border-radius: 10px;
-  height: 400px;
-  width: calc(100% - 20px);
-  display: flex;
-  flex-direction: row;
-  margin: 10px; }
-  .places__descripcion {
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .places__titulo {
-    font-style: italic; }
-  .places__texto {
+  text-align: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+  grid-template-rows: 60px 80px 400px 400px 400px 400px 180px;
+  grid-template-areas: "header header header" "titulo titulo titulo" "artUno artUno artUno" "artDos artDos artDos" "artTres artTres artTres" "artCuatro artCuatro artCuatro" "footer footer footer"; }
+  .gridDestinos .salinasGrandes {
+    grid-area: artUno; }
+  .gridDestinos .valleLuna {
+    grid-area: artDos; }
+  .gridDestinos .hornacal {
+    grid-area: artTres; }
+  .gridDestinos .rioJordan {
+    grid-area: artCuatro; }
+  .gridDestinos .places {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: #040404;
-    padding: 10px;
-    height: auto; }
-  .places__galeria {
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px; }
-  .places__imagen {
-    height: 100%;
-    width: 100%; }
-  .places__img {
-    height: 100%;
-    width: 100%;
-    border: 2px solid #9e9e9e;
+    font-size: 14px;
     border-radius: 10px;
-    object-fit: cover; }
+    width: 80%;
+    height: calc(100% - 20px);
+    margin: 20px auto;
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: row; }
+    .gridDestinos .places__descripcion {
+      text-align: center;
+      padding: 10px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .gridDestinos .places__titulo {
+      font-style: italic; }
+    .gridDestinos .places__texto {
+      padding: 10px;
+      height: auto; }
+    .gridDestinos .places__galeria {
+      height: auto;
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      gap: 3px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px; }
+    .gridDestinos .places__imagen {
+      height: 90%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
+    .gridDestinos .places__img {
+      height: 100%;
+      width: 100%;
+      border: 2px solid #646464;
+      border-radius: 10px;
+      object-fit: cover; }
 
 /*FIN DESTINOS*/
 /*INICIO EVENTOS*/
 .gridEventos {
-  width: 75%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
-
-.evento {
-  padding: 15px; }
-  .evento__descripcion {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+  grid-template-rows: 60px 80px 1200px 180px;
+  grid-template-areas: "header header header" "titulo titulo titulo" "eventos eventos eventos" "footer footer footer"; }
+  .gridEventos .eventos {
+    grid-area: eventos;
     display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .evento__titulo {
-    font-style: italic; }
-  .evento__texto {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    padding: 10px;
-    height: auto; }
+    flex-direction: column; }
+    .gridEventos .eventos .evento {
+      background: linear-gradient(90deg, #645bff 0%, #8d8ddd 50%, #fa7575 100%);
+      width: 80%;
+      height: calc(100% - 20px);
+      margin: 20px auto;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: row; }
+      .gridEventos .eventos .evento__descripcion {
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      .gridEventos .eventos .evento__titulo {
+        font-style: italic;
+        text-shadow: 1px 1px 1px black; }
+      .gridEventos .eventos .evento__texto {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        padding: 10px;
+        height: auto;
+        text-shadow: 1px 1px 1px black; }
+    .gridEventos .eventos .evento:nth-child(1) {
+      background-image: url(../img/eventos/tilcara.jpg);
+      background-size: cover;
+      background-position: center; }
+    .gridEventos .eventos .evento:nth-child(2) {
+      background-image: url(../img/eventos/carnaval.jpg);
+      background-size: cover;
+      background-position: center; }
+    .gridEventos .eventos .evento:nth-child(3) {
+      background-image: url(../img/eventos/pachamama.jpg);
+      background-size: cover;
+      background-position: center; }
 
 /*FIN EVENTOS*/
+/*INICIO GALERIA*/
 .gridGaleria {
-  width: 75%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
+  text-align: center;
+  background-image: url(../img/back2.png);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+  grid-template-rows: 60px 80px auto 180px;
+  grid-template-areas: "header header header" "titulo titulo titulo" "galeria galeria galeria" "footer footer footer"; }
+  .gridGaleria .titulo {
+    grid-area: titulo; }
+  .gridGaleria main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    grid-area: galeria; }
+    .gridGaleria main div {
+      border-radius: 8px;
+      box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.4); }
 
 /*INICIO CONTACTO*/
 .gridContacto {
-  width: 75%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
-
-.contacto {
-  background-image: url(../img/contacto.jpg);
-  background-size: 100% 100%;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  height: 600px;
-  color: #fdf7f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .contacto__formulario {
-    width: 350px;
-    margin: auto;
-    margin-top: 25px;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 15px;
-    box-sizing: border-box; }
-  .contacto__input {
-    width: 100%; }
-  .contacto textarea {
-    width: 100%; }
+  text-align: center;
+  background-image: url(../img/back2.png);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+  grid-template-rows: 60px 80px auto 180px;
+  grid-template-areas: "header header header" "titulo titulo titulo" "contacto contacto contacto" "footer footer footer"; }
+  .gridContacto .titulo {
+    grid-area: titulo; }
+  .gridContacto main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    grid-area: contacto; }
+    .gridContacto main .contacto {
+      background-image: url(../img/contacto.jpg);
+      background-size: 100% 100%;
+      background-position-x: center;
+      background-repeat: no-repeat;
+      height: 600px;
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fdf7f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .gridContacto main .contacto__formulario {
+        width: 350px;
+        margin: auto;
+        margin-top: 25px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 15px;
+        box-sizing: border-box; }
+      .gridContacto main .contacto__input {
+        width: 100%; }
+      .gridContacto main .contacto textarea {
+        width: 100%; }
 
 @media only screen and (max-width: 768px) {
-  nav label {
-    display: block;
-    padding: 10px 5px; }
-  #btn-menu:checked ~ .menu {
-    display: flex; }
-  .menu {
-    position: absolute;
-    width: 200px;
-    display: none;
+  header {
+    background: linear-gradient(120deg, #c14ebc 0%, #cedb71 37%, #c14ebc 100%);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .logo {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      header .logo #logo {
+        height: 50px;
+        width: 160px;
+        margin: auto; }
+    header nav {
+      border-radius: 8px;
+      width: 70%;
+      height: calc(100% - 10px);
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      header nav #btn-menu {
+        display: none; }
+      header nav #icono {
+        display: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10px; }
+      header nav .menu {
+        width: 75%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        margin: 0; }
+        header nav .menu__item {
+          padding: 5px;
+          list-style: none; }
+        header nav .menu__link {
+          color: #2c2c2c;
+          text-decoration: none;
+          font-size: 18px; }
+        header nav .menu__link:hover {
+          font-weight: bold;
+          color: #141414; }
+        header nav .menu--vertical {
+          flex-direction: column; }
+  .titulo {
+    grid-area: titulo;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(120deg, white 0%, #fefbf7 76%, #fcffff 100%); }
+  .footer {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    grid-area: footer;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: cornsilk;
+    font-style: italic;
+    font-size: 14px;
+    border: 1px solid black; }
+    .footer__menu .menu__item {
+      padding: 2px;
+      text-decoration: none; }
+    .footer__menu .menu__link {
+      color: #f0f0f0; }
+    .footer__firma {
+      font-size: 20px; }
+      .footer__firma #coyita {
+        width: 110px;
+        height: 65px; }
+      .footer__firma .firma {
+        font-size: 10px;
+        color: #f0f0f0; }
+    .footer__redes {
+      font-size: 20px; }
+      .footer__redes .menu__link {
+        color: #f0f0f0; }
+      .footer__redes .menu__item {
+        padding: 2px;
+        list-style: none; }
+  #gridHome {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 500px 60px 600px 600px 600px 180px;
+    grid-template-areas: "header header header" "aside aside aside" "titulo titulo titulo" "textoUno textoUno textoUno" "textoDos textoDos textoDos" "textoTres textoTres textoTres" "footer footer footer"; }
+    #gridHome .portada {
+      grid-area: aside;
+      background-image: url(../img/purma.jpg);
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #gridHome .portada__texto {
+        background-color: rgba(173, 216, 230, 0.6);
+        font-style: italic;
+        font-size: 24px;
+        color: #fff;
+        padding: auto;
+        text-align: center;
+        line-height: 30px; }
+    #gridHome .titulo {
+      grid-area: titulo;
+      width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(120deg, white 0%, #fefbf7 76%, #fcffff 100%); }
+      #gridHome .titulo h1 {
+        margin-block-start: 0.3em; }
+    #gridHome #homeJujuy {
+      grid-area: textoUno; }
+    #gridHome #homeRegiones {
+      grid-area: textoDos; }
+    #gridHome #homeComidas {
+      grid-area: textoTres; }
+    #gridHome .articulo {
+      background-color: white;
+      box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      border-radius: 10px;
+      height: calc(100% - 20px);
+      width: 80%;
+      margin: auto; }
+      #gridHome .articulo__texto {
+        font-family: 'Playfair Display', serif;
+        font-size: 16px;
+        padding: 10px 20px;
+        height: calc(40% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      #gridHome .articulo__titulo {
+        margin-top: 25px;
+        margin-bottom: 5px; }
+      #gridHome .articulo__parrafo {
+        margin-top: 5px;
+        margin-bottom: 10px; }
+      #gridHome .articulo__galeria {
+        height: calc(60% - 20px);
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px; }
+      #gridHome .articulo__imagen {
+        height: calc(50% - 5px);
+        width: calc(50% - 6px);
+        border: 2px solid #9e9e9e;
+        border-radius: 8px;
+        object-fit: cover; }
+  .gridDestinos {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 60px 400px 400px 400px 400px 180px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "artUno artUno artUno" "artDos artDos artDos" "artTres artTres artTres" "artCuatro artCuatro artCuatro" "footer footer footer"; }
+    .gridDestinos .salinasGrandes {
+      grid-area: artUno; }
+    .gridDestinos .valleLuna {
+      grid-area: artDos; }
+    .gridDestinos .hornacal {
+      grid-area: artTres; }
+    .gridDestinos .rioJordan {
+      grid-area: artCuatro; }
+    .gridDestinos .titulo {
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .gridDestinos .places {
+      background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      border-radius: 10px;
+      width: 100%;
+      height: calc(100% - 20px);
+      margin: 20px auto;
+      box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: row; }
+      .gridDestinos .places__descripcion {
+        text-align: center;
+        padding: 10px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      .gridDestinos .places__titulo {
+        font-style: italic; }
+      .gridDestinos .places__texto {
+        padding: 10px;
+        height: auto; }
+      .gridDestinos .places__galeria {
+        height: auto;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px; }
+      .gridDestinos .places__imagen {
+        height: 90%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+      .gridDestinos .places__img {
+        height: 100%;
+        width: 100%;
+        border: 2px solid #646464;
+        border-radius: 10px;
+        object-fit: cover; }
+  .gridEventos {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 80px 1500px 180px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "eventos eventos eventos" "footer footer footer"; }
+    .gridEventos .eventos {
+      grid-area: eventos;
+      display: flex;
+      flex-direction: column; }
+      .gridEventos .eventos .evento {
+        background: linear-gradient(90deg, #645bff 0%, #8d8ddd 50%, #fa7575 100%);
+        width: 80%;
+        height: calc(100% - 20px);
+        margin: 20px auto;
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: row; }
+        .gridEventos .eventos .evento__descripcion {
+          text-align: center;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+        .gridEventos .eventos .evento__titulo {
+          font-style: italic;
+          text-shadow: 1px 1px 1px black; }
+        .gridEventos .eventos .evento__texto {
+          font-family: 'Playfair Display', serif;
+          font-size: 22px;
+          padding: 10px;
+          height: auto;
+          text-shadow: 1px 1px 1px black; }
+      .gridEventos .eventos .evento:nth-child(1) {
+        background-image: url(../img/eventos/tilcara.jpg);
+        background-size: cover;
+        background-position: center; }
+      .gridEventos .eventos .evento:nth-child(2) {
+        background-image: url(../img/eventos/carnaval.jpg);
+        background-size: cover;
+        background-position: center; }
+      .gridEventos .eventos .evento:nth-child(3) {
+        background-image: url(../img/eventos/pachamama.jpg);
+        background-size: cover;
+        background-position: center; }
+  .gridGaleria {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url(../img/back2.png);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 60px 500px 180px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "galeria galeria galeria" "footer footer footer"; }
+    .gridGaleria .titulo {
+      grid-area: titulo; }
+    .gridGaleria main {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      grid-area: galeria; }
+      .gridGaleria main div {
+        border-radius: 8px; }
+  .gridContacto {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url(../img/back2.png);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 80px auto 180px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "contacto contacto contacto" "footer footer footer"; }
+    .gridContacto .titulo {
+      grid-area: titulo; }
+    .gridContacto main {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      grid-area: contacto; }
+      .gridContacto main .contacto {
+        background-image: url(../img/contacto.jpg);
+        background-size: 100% 100%;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        height: 700px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fdf7f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .gridContacto main .contacto__formulario {
+          width: 350px;
+          margin: auto;
+          margin-top: 25px;
+          background: rgba(0, 0, 0, 0.4);
+          padding: 15px;
+          box-sizing: border-box; }
+        .gridContacto main .contacto__input {
+          width: 100%; }
+        .gridContacto main .contacto textarea {
+          width: 100%; } }
+
+@media only screen and (max-width: 480px) {
+  header {
+    background: linear-gradient(120deg, #c14ebc 0%, #cedb71 37%, #c14ebc 100%);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .logo {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      header .logo #logo {
+        height: 50px;
+        width: 160px;
+        margin: auto; }
+    header nav {
+      border-radius: 8px;
+      width: 70%;
+      height: calc(100% - 10px);
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end; }
+      header nav #btn-menu {
+        display: none; }
+      header nav #icono {
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10px; }
+      header nav #btn-menu:checked ~ .menu {
+        display: flex; }
+      header nav .menu {
+        width: 100%;
+        position: absolute;
+        display: none;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 55px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: linear-gradient(120deg, #c14ebc 0%, #cedb71 37%, #c14ebc 100%); }
+        header nav .menu__item {
+          padding: 5px;
+          width: 50px;
+          list-style: none; }
+        header nav .menu__link {
+          color: #2c2c2c;
+          text-decoration: none;
+          font-size: 18px; }
+        header nav .menu__link:hover {
+          font-weight: bold;
+          color: #141414; }
+        header nav .menu--vertical {
+          flex-direction: column; }
+  .titulo {
+    grid-area: titulo;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(120deg, white 0%, #fefbf7 76%, #fcffff 100%); }
+    .titulo h1 {
+      margin-block-start: 0.3em; }
+  .footer {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    grid-area: footer;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
     flex-direction: column;
-    align-content: flex-end;
-    margin-top: 55px;
-    padding: 5px 0;
-    background-color: #7999B7;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    transition: all 0.5s; }
-    .menu__item:hover .submenu {
-      display: none; } }
+    justify-content: space-around;
+    align-items: center;
+    color: cornsilk;
+    font-style: italic;
+    font-size: 14px;
+    border: 1px solid black; }
+    .footer__menu {
+      display: none; }
+    .footer__redes {
+      font-size: 20px; }
+      .footer__redes .menu {
+        display: flex; }
+      .footer__redes .menu__link {
+        color: #f0f0f0; }
+      .footer__redes .menu__item {
+        padding: 2px;
+        list-style: none; }
+    .footer__firma {
+      font-size: 20px; }
+      .footer__firma #coyita {
+        width: 110px;
+        height: 60px; }
+      .footer__firma .firma {
+        font-size: 10px;
+        color: #f0f0f0; }
+  #gridHome {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 400px 60px 1100px 1100px 1100px 250px;
+    grid-template-areas: "header header header" "aside aside aside" "titulo titulo titulo" "textoUno textoUno textoUno" "textoDos textoDos textoDos" "textoTres textoTres textoTres" "footer footer footer"; }
+    #gridHome .portada {
+      grid-area: aside;
+      background-image: url(../img/purma.jpg);
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #gridHome .portada__texto {
+        background-color: rgba(173, 216, 230, 0.6);
+        font-style: italic;
+        font-size: 24px;
+        color: #fff;
+        padding: auto;
+        text-align: center;
+        line-height: 30px; }
+    #gridHome #homeJujuy {
+      grid-area: textoUno; }
+    #gridHome #homeRegiones {
+      grid-area: textoDos; }
+    #gridHome #homeComidas {
+      grid-area: textoTres; }
+    #gridHome .articulo {
+      background-color: white;
+      box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      border-radius: 10px;
+      height: calc(100% - 20px);
+      width: 80%;
+      margin: auto; }
+      #gridHome .articulo__texto {
+        font-family: 'Playfair Display', serif;
+        font-size: 16px;
+        padding: 10px 20px;
+        height: calc(35% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      #gridHome .articulo__titulo {
+        margin-top: 25px;
+        margin-bottom: 5px; }
+      #gridHome .articulo__parrafo {
+        margin-top: 5px;
+        margin-bottom: 10px; }
+      #gridHome .articulo__galeria {
+        height: calc(65% - 20px);
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px; }
+      #gridHome .articulo__imagen {
+        height: 160px;
+        width: 340px;
+        border: 2px solid #9e9e9e;
+        border-radius: 8px;
+        object-fit: cover; }
+  .gridDestinos {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 60px 600px 500px 600px 500px 250px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "artUno artUno artUno" "artDos artDos artDos" "artTres artTres artTres" "artCuatro artCuatro artCuatro" "footer footer footer"; }
+    .gridDestinos .salinasGrandes {
+      grid-area: artUno; }
+    .gridDestinos .valleLuna {
+      grid-area: artDos; }
+    .gridDestinos .hornacal {
+      grid-area: artTres; }
+    .gridDestinos .rioJordan {
+      grid-area: artCuatro; }
+    .gridDestinos .titulo {
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .gridDestinos .places {
+      background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      border-radius: 10px;
+      width: 100%;
+      height: calc(100% - 20px);
+      margin: 20px auto;
+      box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column; }
+      .gridDestinos .places__descripcion {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      .gridDestinos .places__titulo {
+        font-style: italic; }
+      .gridDestinos .places__texto {
+        padding: 10px;
+        height: auto; }
+      .gridDestinos .places__galeria {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px; }
+      .gridDestinos .places__imagen {
+        height: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto; }
+      .gridDestinos .places__img {
+        height: 100%;
+        width: 100%;
+        border: 2px solid #646464;
+        border-radius: 10px;
+        object-fit: cover; }
+  .gridEventos {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 60px 2100px 250px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "eventos eventos eventos" "footer footer footer"; }
+    .gridEventos .eventos {
+      grid-area: eventos;
+      display: flex;
+      flex-direction: column; }
+      .gridEventos .eventos .evento {
+        background: linear-gradient(90deg, #645bff 0%, #8d8ddd 50%, #fa7575 100%);
+        width: 80%;
+        height: calc(100% - 20px);
+        margin: 20px auto;
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: row; }
+        .gridEventos .eventos .evento__descripcion {
+          text-align: center;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+        .gridEventos .eventos .evento__titulo {
+          font-style: italic;
+          text-shadow: 1px 1px 1px black; }
+        .gridEventos .eventos .evento__texto {
+          font-family: 'Playfair Display', serif;
+          font-size: 22px;
+          padding: 10px;
+          height: auto;
+          text-shadow: 1px 1px 1px black; }
+      .gridEventos .eventos .evento:nth-child(1) {
+        background-image: url(../img/eventos/tilcara.jpg);
+        background-size: cover;
+        background-position: center; }
+      .gridEventos .eventos .evento:nth-child(2) {
+        background-image: url(../img/eventos/carnaval.jpg);
+        background-size: cover;
+        background-position: center; }
+      .gridEventos .eventos .evento:nth-child(3) {
+        background-image: url(../img/eventos/pachamama.jpg);
+        background-size: cover;
+        background-position: center; }
+  .gridGaleria {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url(../img/back2.png);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 60px 500px 250px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "galeria galeria galeria" "footer footer footer"; }
+    .gridGaleria .titulo {
+      grid-area: titulo; }
+    .gridGaleria main {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      grid-area: galeria; }
+      .gridGaleria main div {
+        border-radius: 8px; }
+  .gridContacto {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url(../img/back2.png);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 60px 700px 250px;
+    grid-template-areas: "header header header" "titulo titulo titulo" "contacto contacto contacto" "footer footer footer"; }
+    .gridContacto .titulo {
+      grid-area: titulo; }
+    .gridContacto main {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      grid-area: contacto; }
+      .gridContacto main .contacto {
+        background-image: url(../img/contacto.jpg);
+        background-size: 100% 100%;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fdf7f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .gridContacto main .contacto__formulario {
+          width: 350px;
+          margin: auto;
+          margin-top: 25px;
+          background: rgba(0, 0, 0, 0.4);
+          padding: 15px;
+          box-sizing: border-box; }
+        .gridContacto main .contacto__input {
+          width: 100%; }
+        .gridContacto main .contacto textarea {
+          width: 100%; } }

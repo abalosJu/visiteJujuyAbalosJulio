@@ -1,294 +1,180 @@
-/*INICIO NAV*/
-
-.logo{
-    width: 25%;
-    height: 100%;
-}
-
-#logo{
-    height: 90%;
-    width: 80%;
-    margin: 5px;
-}
-
-nav{
-    border-radius: 8px;
-    width: 75%;
-    height: calc(100% - 10px);
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-/*INICIO MENU*/
-
-#btn-menu{
-    display: none;
-}
-nav label{
-    display: none;
-}
-
-.menu{
-    width: 75%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0;
+body{
+    background-image: url(../img/back.png);
+    background-color: rgb(230, 230, 230);
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-
-    &__item{
-        padding: 5px;
-        list-style: none;
-    }
-
-    &__link{
-        color: rgb(209, 209, 209);
-        text-decoration: none;
-    }
-
-    &__link:hover{
-        color: lightcoral;
-    }
-
-    &__item:hover .submenu{
-        display: block;
-    }
-
-    &--vertical{
-        flex-direction: column;
-    }
-
-}
-
-.submenu{
-    background-color:#7999B7;
-    position: absolute;
-    width: auto;
-    display: none;
     padding: 0;
-    margin: 0;
-
-    &__item{
-        display: block;
-        padding: 10px;
-        list-style: none;
-    }
-
-    &__link{
-        color: rgb(209, 209, 209);
-        text-decoration: none;
-    }
-
-    &__link:hover{
-        color: lightcoral;
-    }
 }
-/*FIN MENU*/
-/*FIN NAV*/
 
 #gridHome{
-    width: 75%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: calc(40% - 5px) calc(40% - 5px) 20%;
-    grid-template-rows: 60px 300px 400px 400px 400px 150px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 500px 80px 400px 400px 400px 180px;
     grid-template-areas: "header header header"
                          "aside aside aside"
+                         "titulo titulo titulo"
                          "textoUno textoUno textoUno"
                          "textoDos textoDos textoDos"
                          "textoTres textoTres textoTres"
                          "footer footer footer";
+
+    .portada{
+        grid-area: aside;
+        background-image: url(../img/purma.jpg);
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        &__texto{
+        background-color: rgba(173, 216, 230, 0.600);
+        font-style: italic;
+        font-size: 24px;
+        color: #fff;
+        padding: auto;
+        text-align: center;
+        line-height: 30px;
+        }
+    }
+    #homeJujuy{
+        grid-area: textoUno;
+    }
+    #homeRegiones{
+        grid-area: textoDos;
+    }
+    #homeComidas{
+        grid-area: textoTres;
+    }
+    .articulo{
+    
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        border-radius: 10px;
+        height: 100%;
+        width: 80%;
+        margin: auto;
+    
+        &__texto{
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            padding: 10px 20px;
+            height: calc(50% - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;        
+        }
+    
+        &__galeria{
+            height: calc(50% - 20px);
+            display: flex;
+            flex-direction: row;
+            gap: 3px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    
+        &__imagen{
+            height: 100%;
+            width: 100%;
+            border: 2px solid rgb(158, 158, 158);
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
 }
 
 /*INICIO HEADER*/
 header{
-    background-color:#7999B7;
-    height: 60px;
-    border-radius: 8px;
+    background: linear-gradient(120deg, rgba(193,78,188,1) 0%, rgba(206,219,113,1) 37%, rgba(193,78,188,1) 100%);
     grid-area: header;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
 
-.logo{
-    width: 20%;
-    height: 100%;
-}
-
-#logo{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-}
-
-nav{
-    border-radius: 8px;
-    width: 75%;
-    height: calc(100% - 10px);
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-/*INICIO MENU*/
-
-#btn-menu{
-    display: none;
-}
-nav label{
-    display: none;
-}
-
-.menu{
-    width: 75%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-
-    &__item{
-        padding: 5px;
-        list-style: none;
-    }
-
-    &__link{
-        color: rgb(209, 209, 209);
-        text-decoration: none;
-    }
-
-    &__link:hover{
-        color: lightcoral;
-    }
-
-    &__item:hover .submenu{
-        display: block;
-    }
-
-    &--vertical{
-        flex-direction: column;
-    }
-}
-
-.submenu{
-    background-color:#7999B7;
-    position: absolute;
-    width: auto;
-    display: none;
-    padding: 0;
-    margin: 0;
-
-    &__item{
-        display: block;
-        padding: 10px;
-        list-style: none;
-    }
-
-    &__link{
-        color: rgb(209, 209, 209);
-        text-decoration: none;
-    }
-
-    &__link:hover{
-        color: lightcoral;
-    }
-}
-/*FIN MENU*/
-/*FIN HEADER*/
-
-/*INICIO PORTADA*/
-.portada{
-    grid-area: aside;
-    background-image: url(../img/purma.jpg);
-    border-radius: 8px;
-    background-size: 100% 120%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    &__titulo{
-        background-color: rgba(173, 216, 230, 0.600);
-        color: white;
-        font-style: italic;
-    }
-
-    &__texto{
-    background-color: rgba(173, 216, 230, 0.600);
-    font-style: italic;
-    font-size: 20px;
-    color: #fff;
-    padding: auto;
-    text-align: center;
-    }
-}
-/*FIN PORTADA*/
-
-#homeJujuy{
-    grid-area: textoUno;
-}
-#homeRegiones{
-    grid-area: textoDos;
-}
-#homeComidas{
-    grid-area: textoTres;
-}
-.articulo{
-
-    background-color: rgb(255, 255, 255);
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-
-    &__texto{
-        font-family: 'Playfair Display', serif;
-        font-size: 14px;
-        padding: 10px;
-        height: calc(50% - 20px);
+    .logo{
+        width: 20%;
+        height: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
+        align-items: flex-start;    
+    
+        #logo{
+            height: 50px;
+            width: 160px;
+            margin: auto;
+        }
     }
 
-    &__galeria{
-        height: calc(50% - 20px);
+    nav{
+        border-radius: 8px;
+        width: 60%;
+        height: calc(100% - 10px);
+        margin: 5px;
         display: flex;
         flex-direction: row;
-        gap: 3px;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
-
+        justify-content: flex-end;
+    
+        #btn-menu{
+            display: none;
+        }
+        #icono{
+            display: none;
+        }
+        .menu{
+            width: 75%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+    
+            &__item{
+                padding: 5px;
+                list-style: none;
+            }
+    
+            &__link{
+                color: rgb(44, 44, 44);
+                text-decoration: none;
+            }
+    
+            &__link:hover{        
+                font-weight: bold;
+                color: rgb(20, 20, 20);
+            }
+    
+            &--vertical{
+                flex-direction: column;
+            }
+        }
     }
+}/*FIN HEADER*/
 
-    &__imagen{
-        height: 100%;
-        width: 100%;
-        border: 2px solid rgb(158, 158, 158);
-        border-radius: 10px;
-        object-fit: cover;
-    }
-
+.titulo{
+    grid-area: titulo;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 0 5px 8px rgba(0,0,0,.4);
+    background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(254,251,247,1) 76%, rgba(252,255,255,1) 100%);
 }
 
+/*INICIO FOOTER*/
 .footer{
-    background-image: linear-gradient(to right, rgb(51, 51, 51) , rgb(150, 149, 149));
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
     grid-area: footer;
     height: auto;
-    background: rgb(54, 53, 54);
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -297,205 +183,1296 @@ nav label{
     font-style: italic;
     font-size: 14px;
     border: 1px solid black;
+    
 
-    &__menu{
-        color: cornsilk;            
+    &__menu{        
+        .menu__item{
+            padding: 2px;
+            list-style: none;
+        }
+        .menu__link{
+            color: rgb(240, 240, 240);
+            text-decoration: none;
+        }
     }
-
     &__firma{
         font-size: 20px;
+        #coyita{
+            width: 110px;
+            height: 65px;
+        }
+        .firma{
+            font-size: 10px;
+            color: rgb(240, 240, 240);
+        }
     }
-
     &__redes{
-        font-size: 14px;
+        font-size: 20px;
+        
+        .menu__item{
+            padding: 2px;
+            list-style: none;
+        }
+        
+        .menu__link{
+            color: rgb(240, 240, 240);
+            list-style: none;
+        }
     }
-}
-
-@mixin estiloTexto($tamaño , $color){
-
-    font-family: 'Playfair Display', serif;
-    font-size: $tamaño;
-    color: $color;
-    
-}
+}/*FIN FOOTER*/
 
 /*INICIO DESTINOS*/
 .gridDestinos{
-    width: 75%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.places{
-    background-color: #fdf7f4;
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    border-radius: 10px;
-    height: 400px;
-    width: calc(100% - 20px);
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-
-    &__descripcion{
-        text-align: center;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center
-
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 80px 400px 400px 400px 400px 180px;
+    grid-template-areas: "header header header"
+                         "titulo titulo titulo"
+                         "artUno artUno artUno"
+                         "artDos artDos artDos"
+                         "artTres artTres artTres"
+                         "artCuatro artCuatro artCuatro"
+                         "footer footer footer";
+    
+    .salinasGrandes{
+        grid-area: artUno;
     }
-
-    &__titulo{
-        font-style: italic;
-
+    .valleLuna{
+        grid-area: artDos;
     }
-
-    &__texto{
-        @include estiloTexto(18px, #040404);
-        padding: 10px;
-        height: auto;
-        
+    .hornacal{
+        grid-area: artTres;
     }
-
-    &__galeria{
-        height: auto;
+    .rioJordan{
+        grid-area: artCuatro;
+    }
+    .places{
+        background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        border-radius: 10px;
+        width: 80%;
+        height: calc(100% - 20px);
+        margin: 20px auto;
+        box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
         display: flex;
         flex-direction: row;
-        gap: 3px;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
-    }
 
-    &__imagen{
-        height: 100%;
-        width: 100%;
-
+        &__descripcion{
+            text-align: center;
+            padding: 10px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__titulo{
+            font-style: italic;
+        }
+        &__texto{
+            
+            padding: 10px;
+            height: auto;        
+        }
+        &__galeria{
+            height: auto;
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            gap: 3px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        &__imagen{
+            height: 90%;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__img{
+            height: 100%;
+            width: 100%;
+            border: 2px solid rgb(100, 100, 100);
+            border-radius: 10px;
+            object-fit: cover;
+        }
     }
-
-    &__img{
-        height: 100%;
-        width: 100%;
-        border: 2px solid rgb(158, 158, 158);
-        border-radius: 10px;
-        object-fit: cover;
-    }
-}
-/*FIN DESTINOS*/
+}/*FIN DESTINOS*/
 
 /*INICIO EVENTOS*/
 .gridEventos{
-    width: 75%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.evento{
-    
-    @extend .places;
-    padding: 15px;
-
-    &__descripcion{
-        text-align: center;
-        padding: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 80px 1200px 180px;
+    grid-template-areas: "header header header"
+                         "titulo titulo titulo"
+                         "eventos eventos eventos"
+                         "footer footer footer";
+                        
+    .eventos{
+        grid-area: eventos;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-
+                        
+        .evento{
+            background: linear-gradient(90deg, rgba(100,91,255,1) 0%, rgba(141,141,221,1) 50%, rgba(250,117,117,1) 100%);
+            width: 80%;
+            height: calc(100% - 20px);
+            margin: 20px auto;
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+            display: flex;
+            flex-direction: row;
+                    
+            &__descripcion{
+                text-align: center;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;        
+            }
+    
+            &__titulo{
+                font-style: italic;
+                text-shadow: 1px 1px 1px black;
+            }
+    
+            &__texto{
+                font-family: 'Playfair Display', serif;
+                font-size: 22px;
+                padding: 10px;
+                height: auto;
+                text-shadow: 1px 1px 1px black;    
+            }
+        }
+        .evento:nth-child(1){
+            background-image: url(../img/eventos/tilcara.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .evento:nth-child(2){
+            background-image: url(../img/eventos/carnaval.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .evento:nth-child(3){
+            background-image: url(../img/eventos/pachamama.jpg);
+            background-size: cover;
+            background-position: center;
+        }
     }
+}/*FIN EVENTOS*/
 
-    &__titulo{
-        font-style: italic;
-
-    }
-
-    &__texto{
-        font-family: 'Playfair Display', serif;
-        font-size: 18px;
-        padding: 10px;
-        height: auto;
-        
-    }
-}
-/*FIN EVENTOS*/
-
+/*INICIO GALERIA*/
 .gridGaleria{
-    width: 75%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    background-image: url(../img/back2.png);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 80px auto 180px;
+    grid-template-areas: "header header header"
+                         "titulo titulo titulo"
+                         "galeria galeria galeria"
+                         "footer footer footer";
+    
+    .titulo{
+        grid-area: titulo;
+
+    }
+
+    main{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        grid-area: galeria;
+        
+        div{
+            border-radius: 8px;
+            box-shadow: 8px 8px 8px 0 rgba(0,0,0,.4);
+        }
+
+    }
 }
+
 
 /*INICIO CONTACTO*/
 .gridContacto{
-    width: 75%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.contacto{
-    background-image: url(../img/contacto.jpg);
-    background-size: 100% 100%;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    height: 600px;
-    color: #fdf7f4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-image: url(../img/back2.png);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+    grid-template-rows: 60px 80px auto 180px;
+    grid-template-areas: "header header header"
+                         "titulo titulo titulo"
+                         "contacto contacto contacto"
+                         "footer footer footer";
     
-    &__formulario{
-        width: 350px;
-        margin: auto;
-        margin-top: 25px;
-        background: rgba(0,0,0,.4);
-        padding: 15px;
-        box-sizing: border-box;
+    .titulo{
+        grid-area: titulo;
+
     }
 
-    &__input{
-        width: 100%;
-    
-    }
+    main{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        grid-area: contacto;
 
-    textarea{
-        width: 100%;
+        .contacto{
+            background-image: url(../img/contacto.jpg);
+            background-size: 100% 100%;
+            background-position-x: center;
+            background-repeat: no-repeat;
+            height: 600px;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            color: #fdf7f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            &__formulario{
+                width: 350px;
+                margin: auto;
+                margin-top: 25px;
+                background: rgba(0,0,0,.4);
+                padding: 15px;
+                box-sizing: border-box;
+            }
+        
+            &__input{
+                width: 100%;
+            }
+        
+            textarea{
+                width: 100%;
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 768px){
 
-    nav label{
-        display: block;
-        padding: 10px 5px;        
-    }
-
-    #btn-menu:checked ~ .menu{
-        display: flex;
-    }
     
-    .menu{
-        position: absolute;
-        width: 200px;
-        display: none;
-        flex-direction: column;
-        align-content: flex-end;
-        margin-top: 55px;
-        padding: 5px 0; 
-        background-color: #7999B7;
-        border-bottom: 1px solid black;
-        border-left: 1px solid black;
-        transition: all 0.5s;
-        
-        &__item:hover .submenu{
-            display: none;
+    header{
+        background: linear-gradient(120deg, rgba(193,78,188,1) 0%, rgba(206,219,113,1) 37%, rgba(193,78,188,1) 100%);
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+        .logo{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            #logo{
+                height: 50px;
+                width: 160px;
+                margin: auto;
+            }
+        }
+
+        nav{
+            border-radius: 8px;
+            width: 70%;
+            height: calc(100% - 10px);
+            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            #btn-menu{
+                display: none;
+            }
+            #icono{
+                display: none;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-right: 10px;
+            }
+            .menu{
+                width: 75%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+            
+                &__item{
+                    padding: 5px;
+                    list-style: none;
+                }
+            
+                &__link{
+                    color: rgb(44, 44, 44);
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+            
+                &__link:hover{        
+                    font-weight: bold;
+                    color: rgb(20, 20, 20);
+                }
+            
+                &--vertical{
+                    flex-direction: column;
+                }
+            }
         }
     }
 
+    .titulo{
+        grid-area: titulo;
+        width: 80%;
+        margin: auto;
+        box-shadow: 0 0 5px 8px rgba(0,0,0,.4);
+        background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(254,251,247,1) 76%, rgba(252,255,255,1) 100%);
+    }
+    
+    .footer{
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        grid-area: footer;
+        height: auto;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: cornsilk;
+        font-style: italic;
+        font-size: 14px;
+        border: 1px solid black;
+    
+        &__menu{        
+            .menu__item{
+                padding: 2px;
+                text-decoration: none;
+            }
+            .menu__link{
+                color: rgb(240, 240, 240);
+            }
+        }
+        &__firma{
+            font-size: 20px;
+            #coyita{
+                width: 110px;
+                height: 65px;
+            }
+            .firma{
+                font-size: 10px;
+                color: rgb(240, 240, 240);
+            }
+        }
+        &__redes{
+            font-size: 20px;
+            .menu__link{
+                color: rgb(240, 240, 240);
+            }
+            .menu__item{
+                padding: 2px;
+                list-style: none;
+            }
+        }
+    }
+
+    #gridHome{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 500px 60px 600px 600px 600px 180px;
+        grid-template-areas: "header header header"
+                             "aside aside aside"
+                             "titulo titulo titulo"
+                             "textoUno textoUno textoUno"
+                             "textoDos textoDos textoDos"
+                             "textoTres textoTres textoTres"
+                             "footer footer footer";
+
+        .portada{
+            grid-area: aside;
+            background-image: url(../img/purma.jpg);
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            &__texto{
+            background-color: rgba(173, 216, 230, 0.600);
+            font-style: italic;
+            font-size: 24px;
+            color: #fff;
+            padding: auto;
+            text-align: center;
+            line-height: 30px;
+            }
+        }    
+        .titulo{
+            grid-area: titulo;
+            width: 60%;
+            margin: 0 auto;
+            box-shadow: 0 0 5px 8px rgba(0,0,0,.4);
+            background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(254,251,247,1) 76%, rgba(252,255,255,1) 100%);
+
+            h1{
+                margin-block-start: 0.3em;
+            }
+        
+        }
+        #homeJujuy{
+            grid-area: textoUno;
+        }
+        #homeRegiones{
+            grid-area: textoDos;
+        }
+        #homeComidas{
+            grid-area: textoTres;
+        }
+        .articulo{
+        
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            border-radius: 10px;
+            height: calc(100% - 20px);
+            width: 80%;
+            margin: auto;
+        
+            &__texto{
+                font-family: 'Playfair Display', serif;
+                font-size: 16px;
+                padding: 10px 20px;
+                height: calc(40% - 20px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &__titulo{
+                margin-top: 25px;
+                margin-bottom: 5px;
+            }
+
+            &__parrafo{
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+        
+            &__galeria{
+                height: calc(60% - 20px);
+                display: flex;
+                flex-direction: row;
+                gap: 3px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        
+            &__imagen{
+                height: calc(50% - 5px);
+                width: calc(50% - 6px);
+                border: 2px solid rgb(158, 158, 158);
+                border-radius: 8px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .gridDestinos{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 60px 400px 400px 400px 400px 180px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "artUno artUno artUno"
+                             "artDos artDos artDos"
+                             "artTres artTres artTres"
+                             "artCuatro artCuatro artCuatro"
+                             "footer footer footer";
+        
+        .salinasGrandes{
+            grid-area: artUno;
+        }
+        .valleLuna{
+            grid-area: artDos;
+        }
+        .hornacal{
+            grid-area: artTres;
+        }
+        .rioJordan{
+            grid-area: artCuatro;
+        }
+        .titulo{
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .places{
+            background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            border-radius: 10px;
+            width: 100%;
+            height: calc(100% - 20px);
+            margin: 20px auto;
+            box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+            display: flex;
+            flex-direction: row;
+    
+            &__descripcion{
+                text-align: center;
+                padding: 10px;
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            &__titulo{
+                font-style: italic;
+            }
+            &__texto{
+                
+                padding: 10px;
+                height: auto;        
+            }
+            &__galeria{
+                height: auto;
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                gap: 3px;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            &__imagen{
+                height: 90%;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &__img{
+                height: 100%;
+                width: 100%;
+                border: 2px solid rgb(100, 100, 100);
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .gridEventos{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 80px 1500px 180px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "eventos eventos eventos"
+                             "footer footer footer";
+                            
+        .eventos{
+            grid-area: eventos;
+            display: flex;
+            flex-direction: column;
+                            
+            .evento{
+                background: linear-gradient(90deg, rgba(100,91,255,1) 0%, rgba(141,141,221,1) 50%, rgba(250,117,117,1) 100%);
+                width: 80%;
+                height: calc(100% - 20px);
+                margin: 20px auto;
+                font-family: 'Playfair Display', serif;
+                font-size: 14px;
+                color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+                display: flex;
+                flex-direction: row;
+                        
+                &__descripcion{
+                    text-align: center;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;        
+                }
+        
+                &__titulo{
+                    font-style: italic;
+                    text-shadow: 1px 1px 1px black;
+                }
+        
+                &__texto{
+                    font-family: 'Playfair Display', serif;
+                    font-size: 22px;
+                    padding: 10px;
+                    height: auto;
+                    text-shadow: 1px 1px 1px black;    
+                }
+            }
+            .evento:nth-child(1){
+                background-image: url(../img/eventos/tilcara.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .evento:nth-child(2){
+                background-image: url(../img/eventos/carnaval.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .evento:nth-child(3){
+                background-image: url(../img/eventos/pachamama.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    .gridGaleria{
+        width: 100%;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-image: url(../img/back2.png);
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 60px 500px 180px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "galeria galeria galeria"
+                             "footer footer footer";
+        
+        .titulo{
+            grid-area: titulo;    
+        }
+    
+        main{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            grid-area: galeria;
+                        
+            div{
+                border-radius: 8px;
+            }
+    
+        }
+    }
+
+    .gridContacto{
+        width: 100%;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-image: url(../img/back2.png);
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 80px auto 180px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "contacto contacto contacto"
+                             "footer footer footer";
+        
+        .titulo{
+            grid-area: titulo;
+    
+        }
+    
+        main{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            grid-area: contacto;
+    
+            .contacto{
+                background-image: url(../img/contacto.jpg);
+                background-size: 100% 100%;
+                background-position-x: center;
+                background-repeat: no-repeat;
+                height: 700px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                color: #fdf7f4;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                &__formulario{
+                    width: 350px;
+                    margin: auto;
+                    margin-top: 25px;
+                    background: rgba(0,0,0,.4);
+                    padding: 15px;
+                    box-sizing: border-box;
+                }
+            
+                &__input{
+                    width: 100%;
+                }
+            
+                textarea{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+    
+    header{
+        background: linear-gradient(120deg, rgba(193,78,188,1) 0%, rgba(206,219,113,1) 37%, rgba(193,78,188,1) 100%);
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+        .logo{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            #logo{
+                height: 50px;
+                width: 160px;
+                margin: auto;
+            }
+        }
+
+        nav{
+            border-radius: 8px;
+            width: 70%;
+            height: calc(100% - 10px);
+            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            #btn-menu{
+                display: none;
+            }
+            #icono{
+                display: block;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-right: 10px;
+            }
+            #btn-menu:checked ~ .menu{
+                display: flex;
+            }
+            .menu{
+                width: 100%;
+                position: absolute;
+                display: none;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 55px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                background: linear-gradient(120deg, rgba(193,78,188,1) 0%, rgba(206,219,113,1) 37%, rgba(193,78,188,1) 100%);
+            
+                &__item{
+                    padding: 5px;
+                    width: 50px;
+                    list-style: none;
+                }
+            
+                &__link{
+                    color: rgb(44, 44, 44);
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+            
+                &__link:hover{        
+                    font-weight: bold;
+                    color: rgb(20, 20, 20);
+                }
+            
+                &--vertical{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    .titulo{
+        grid-area: titulo;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 0 5px 8px rgba(0,0,0,.4);
+        background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(254,251,247,1) 76%, rgba(252,255,255,1) 100%);
+
+        h1{
+            margin-block-start: 0.3em;
+        }
+    
+    }
+    
+    .footer{
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        grid-area: footer;
+        height: auto;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: cornsilk;
+        font-style: italic;
+        font-size: 14px;
+        border: 1px solid black;
+    
+        &__menu{
+            display: none;
+        }
+        &__redes{
+            font-size: 20px;
+            .menu{
+                display: flex;
+            }
+            .menu__link{
+                color: rgb(240, 240, 240);
+            }
+            .menu__item{
+                padding: 2px;
+                list-style: none;
+            }
+        }
+        &__firma{
+            font-size: 20px;
+            #coyita{
+                width: 110px;
+                height: 60px;
+            }
+            .firma{
+                font-size: 10px;
+                color: rgb(240, 240, 240);
+            }
+        }
+        
+    }
+
+    #gridHome{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 400px 60px 1100px 1100px 1100px 250px;
+        grid-template-areas: "header header header"
+                             "aside aside aside"
+                             "titulo titulo titulo"
+                             "textoUno textoUno textoUno"
+                             "textoDos textoDos textoDos"
+                             "textoTres textoTres textoTres"
+                             "footer footer footer";
+
+        .portada{
+            grid-area: aside;
+            background-image: url(../img/purma.jpg);
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            &__texto{
+            background-color: rgba(173, 216, 230, 0.600);
+            font-style: italic;
+            font-size: 24px;
+            color: #fff;
+            padding: auto;
+            text-align: center;
+            line-height: 30px;
+            }
+        }    
+        
+        #homeJujuy{
+            grid-area: textoUno;
+        }
+        #homeRegiones{
+            grid-area: textoDos;
+        }
+        #homeComidas{
+            grid-area: textoTres;
+        }
+        .articulo{
+        
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            border-radius: 10px;
+            height: calc(100% - 20px);
+            width: 80%;
+            margin: auto;
+        
+            &__texto{
+                font-family: 'Playfair Display', serif;
+                font-size: 16px;
+                padding: 10px 20px;
+                height: calc(35% - 20px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &__titulo{
+                margin-top: 25px;
+                margin-bottom: 5px;
+            }
+
+            &__parrafo{
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+        
+            &__galeria{
+                height: calc(65% - 20px);
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        
+            &__imagen{
+                height: 160px;
+                width: 340px;
+                border: 2px solid rgb(158, 158, 158);
+                border-radius: 8px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .gridDestinos{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 60px 600px 500px 600px 500px 250px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "artUno artUno artUno"
+                             "artDos artDos artDos"
+                             "artTres artTres artTres"
+                             "artCuatro artCuatro artCuatro"
+                             "footer footer footer";
+        
+        .salinasGrandes{
+            grid-area: artUno;
+        }
+        .valleLuna{
+            grid-area: artDos;
+        }
+        .hornacal{
+            grid-area: artTres;
+        }
+        .rioJordan{
+            grid-area: artCuatro;
+        }
+        .titulo{
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .places{
+            background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            border-radius: 10px;
+            width: 100%;
+            height: calc(100% - 20px);
+            margin: 20px auto;
+            box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+            display: flex;
+            flex-direction: column;
+    
+            &__descripcion{
+                text-align: center;
+                padding: 0;
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            &__titulo{
+                font-style: italic;
+            }
+            &__texto{                
+                padding: 10px;
+                height: auto;        
+            }
+            &__galeria{
+                height: 60%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 3px;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            &__imagen{
+                height: 100%;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &__img{
+                height: 100%;
+                width: 100%;
+                border: 2px solid rgb(100, 100, 100);
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .gridEventos{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 60px 2100px 250px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "eventos eventos eventos"
+                             "footer footer footer";
+                            
+        .eventos{
+            grid-area: eventos;
+            display: flex;
+            flex-direction: column;
+                            
+            .evento{
+                background: linear-gradient(90deg, rgba(100,91,255,1) 0%, rgba(141,141,221,1) 50%, rgba(250,117,117,1) 100%);
+                width: 80%;
+                height: calc(100% - 20px);
+                margin: 20px auto;
+                font-family: 'Playfair Display', serif;
+                font-size: 14px;
+                color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 8px 10px -4px rgba(0,0,0,.6);
+                display: flex;
+                flex-direction: row;
+                        
+                &__descripcion{
+                    text-align: center;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;        
+                }
+        
+                &__titulo{
+                    font-style: italic;
+                    text-shadow: 1px 1px 1px black;
+                }
+        
+                &__texto{
+                    font-family: 'Playfair Display', serif;
+                    font-size: 22px;
+                    padding: 10px;
+                    height: auto;
+                    text-shadow: 1px 1px 1px black;    
+                }
+            }
+            .evento:nth-child(1){
+                background-image: url(../img/eventos/tilcara.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .evento:nth-child(2){
+                background-image: url(../img/eventos/carnaval.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .evento:nth-child(3){
+                background-image: url(../img/eventos/pachamama.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    .gridGaleria{
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-image: url(../img/back2.png);
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 60px 500px 250px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "galeria galeria galeria"
+                             "footer footer footer";
+        
+        .titulo{
+            grid-area: titulo;    
+        }
+    
+        main{
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            grid-area: galeria;
+                        
+            div{
+                border-radius: 8px;
+            }
+    
+        }
+    }
+
+    .gridContacto{
+        width: 100%;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-image: url(../img/back2.png);
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: calc(10% - 5px) calc(80% - 5px) 10%;
+        grid-template-rows: 60px 60px 700px 250px;
+        grid-template-areas: "header header header"
+                             "titulo titulo titulo"
+                             "contacto contacto contacto"
+                             "footer footer footer";
+        
+        .titulo{
+            grid-area: titulo;
+    
+        }
+    
+        main{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            grid-area: contacto;
+    
+            .contacto{
+                background-image: url(../img/contacto.jpg);
+                background-size: 100% 100%;
+                background-position-x: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                color: #fdf7f4;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                &__formulario{
+                    width: 350px;
+                    margin: auto;
+                    margin-top: 25px;
+                    background: rgba(0,0,0,.4);
+                    padding: 15px;
+                    box-sizing: border-box;
+                }
+            
+                &__input{
+                    width: 100%;
+                }
+            
+                textarea{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

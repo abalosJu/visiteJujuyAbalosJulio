@@ -7,6 +7,7 @@
     <meta name="keywords" content="turismo vacaciones norte jujuy naturaleza">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/estiloSCSS.css">
+    <script src="https://kit.fontawesome.com/156184f9e1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <title>VisiteJujuy</title>
@@ -23,7 +24,7 @@
 
             <nav>
                 <input type="checkbox" id="btn-menu">
-                <label for="btn-menu"><img src="img/btn-menu.png" alt=""></label>
+                <label id="icono" for="btn-menu"><i class="fas fa-bars"></i></label>
 
                 <ul class="menu">
                     <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
@@ -36,19 +37,16 @@
                         
         </header>
 
-        <hr>
-
         <div class="portada">
-            <h1 class="portada__titulo">DESCUBRE JUJUY!</h1>
-            <p class="portada__texto">Caminar por nuestra tierra es retar al paso del tiempo, conoce el hogar de grandes civilizaciones
+            <p class="portada__texto">"Caminar por nuestra tierra es retar al paso del tiempo, conoce el hogar de grandes civilizaciones
             que hoy son reconocidos sitios arqueológicos. Serás parte viva del patrimonio de la humanidad.
             Junto a la Pachamama (Madre Tierra) desaparecen las barreras y en pocos kilómetros se puede
             apreciar una multiplicidad de paisajes como cerros multicolores, selvas hasta grandes desiertos
-            de altura.
+            de altura."
             </p>
         </div>
 
-        <hr>
+        <div class="titulo"><h1>DESCUBRE JUJUY!</h1></div>
 
         <section id="homeJujuy">
 
@@ -86,7 +84,7 @@
             <article class="articulo">
                     
                 <div class="articulo__texto">
-                    <h2 class="articulo__titulo">REGIONES</h2>
+                    <h2 class="articulo__titulo">Regiones</h2>
                     <p class="articulo__parrafo">La provincia de Jujuy se encuentra dentro del sistema andino sudamericano, escalonándose 
                     sucesivamente de oeste a este la Cordillera de los Andes, el Altiplano, la Quebrada y 
                     los Valles, dividiéndose en cuatro regiones bien diferenciadas  por el relieve, clima, 
@@ -139,8 +137,6 @@
                 
         </section>              
 
-        <hr>
-
         <footer class="footer">
 
             <div class="footer__menu">
@@ -151,20 +147,20 @@
                     <li class="menu__item"><a class="menu__link" href="html/galeria.html">Galeria</a></li>
                     <li class="menu__item"><a class="menu__link" href="html/contacto.html">Contacto</a></li>
                 </ul>
-
             </div>
+
             <div class="footer__firma">
-
+                <img src="img/firmaFooter.png" alt="firma" id="coyita">
                 <p id="textFooter">A Jujuy Siempre Se Vuelve!</p>
-
+                <p class="firma">By Abalos Julio</p>
             </div>
+            
             <div class="footer__redes">
-                <ul class="menu menu--vertical">
-                    <li class="menu__item"><a class="menu__link" href="https://www.instagram.com/visitjujuy">Instagram</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.facebook.com/VisitJujuyOfficial">Facebook</a></li>
-                    <li class="menu__item"><a class="menu__link" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/">Youtube</a></li>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.instagram.com/visitjujuy"><i class="fab fa-instagram"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.facebook.com/VisitJujuyOfficial"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="menu__item"><a class="menu__link" target="_blank" href="https://www.youtube.com/channel/UC-X9DFYqxQYUkFBewkFAVZg/"><i class="fab fa-youtube"></i></a></li>
                 </ul>
-
             </div>
 
         </footer>
